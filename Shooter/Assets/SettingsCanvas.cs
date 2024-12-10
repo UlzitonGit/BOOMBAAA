@@ -18,8 +18,8 @@ public class SettingsCanvas : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         if(PlayerPrefs.GetInt("iteration") == 0)
         {
-            sfxValue = sfx.value;
-            mfxValue = mfx.value;
+            PlayerPrefs.SetFloat(mfx.name, 0.5f);
+            PlayerPrefs.SetFloat(sfx.name, 0.5f);
             PlayerPrefs.SetInt("iteration", 1);
         }
         sfxValue = PlayerPrefs.GetFloat(sfx.name);
